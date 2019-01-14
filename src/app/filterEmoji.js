@@ -1,5 +1,6 @@
 import emojiList from './emojiList.json';
 
+// please be aware the encoding of emojiList.json
 export default function filterEmoji(searchText, maxResults) {
   return emojiList
     .filter(emoji => {
