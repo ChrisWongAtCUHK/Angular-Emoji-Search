@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Emoji } from './emoji';
 import filterEmoji from './filterEmoji';
 
 @Component({
@@ -6,6 +7,15 @@ import filterEmoji from './filterEmoji';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  emojiData = filterEmoji("", 20);
+export class AppComponent implements OnInit {
+  emojiData: Emoji[];
+  constructor() { }
+
+  handleSearchChange(event) {
+    this.emojiData = filterEmoji(event.target.value, 20);
+  };
+
+  ngOnInit() {
+    this.emojiData = filterEmoji("", 20);
+  }
 }
