@@ -3,13 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { EmojiHeaderComponent } from './emoji-header/emoji-header.component';
-import { EmojiResultsRowComponent } from './emoji-results-row/emoji-results-row.component';
+import { EmojiResultRowComponent } from './emoji-result-row/emoji-result-row.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmojiHeaderComponent,
-    EmojiResultsRowComponent
+    EmojiResultRowComponent
   ],
   imports: [
     BrowserModule
