@@ -1,5 +1,5 @@
 <div
-  class="component-emoji-result-row copy-to-clipboard"
+  class="component-emoji-result-row copy-to-clipboard" [attr.data-clipboard-text]="emoji.symbol"
 >
   <img alt="{{emoji.title}}" src="{{emoji.src}}" />
   <span class="title">{{emoji.title}}</span>

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EmojiResultsRowComponent } from './emoji-results-row.component';
+import { EmojiResultRowComponent } from './emoji-result-row.component';
 
 describe('EmojiResultsRowComponent', () => {
-  let component: EmojiResultsRowComponent;
-  let fixture: ComponentFixture<EmojiResultsRowComponent>;
+  let component: EmojiResultRowComponent;
+  let fixture: ComponentFixture<EmojiResultRowComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EmojiResultsRowComponent ]
+      declarations: [ EmojiResultRowComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EmojiResultsRowComponent);
+    fixture = TestBed.createComponent(EmojiResultRowComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
