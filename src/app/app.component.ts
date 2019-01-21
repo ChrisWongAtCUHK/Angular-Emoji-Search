@@ -9,13 +9,18 @@ import filterEmoji from './filterEmoji';
 })
 export class AppComponent implements OnInit {
   emojiData: Emoji[];
+  txt: String;
   constructor() { }
 
-  handleSearchChange(event) {
-    this.emojiData = filterEmoji(event.target.value, 20);
+  handleSearchChange(value: String) {
+    this.emojiData = filterEmoji(value, 20);
   };
 
   ngOnInit() {
     this.emojiData = filterEmoji("", 20);
   }
+
+  changeTxt(value: String) {
+    this.txt = value;
+  };
 }

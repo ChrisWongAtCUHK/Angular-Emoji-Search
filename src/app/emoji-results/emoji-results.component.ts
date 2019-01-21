@@ -8,7 +8,12 @@ import Clipboard from 'clipboard';
   styleUrls: ['./emoji-results.component.css']
 })
 export class EmojiResultsComponent implements OnInit {
-  @Input() emojiData: Emoji[];
+  _emojiData: Emoji[];
+  @Input()
+  set emojiData(value: Emoji[]){
+    this._emojiData = value;
+  }
+
   clipboard: ClipboardEvent;
 
   constructor() { }
@@ -16,5 +21,4 @@ export class EmojiResultsComponent implements OnInit {
   ngOnInit() {
     this.clipboard = new Clipboard(".copy-to-clipboard");
   }
-
 }
